@@ -2,7 +2,9 @@
   <div class="banner-content">
     <h1>RBnP !</h1>
     <p>Awesome raclette-barbecue-plancha machines four awesome folks !</p>
+    <% if policy(Machine).create? %>
     <%= link_to "Add a raclette/barbecue/plancha", new_machine_path, class: "btn btn-primary btn-lg" %>
+    <% end %>
   </div>
 </div>
 <div class="container">
