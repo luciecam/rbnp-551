@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Louez vos appareils 🧀🥩", "#", class: "nav-link btn-navbar" %>
+        <%= link_to "Louez vos appareils 🧀🥩", new_machine_path, class: "nav-link btn-navbar" %>
       </li>
       <li class="nav-item dropdown">
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -19,10 +19,10 @@
           <% if user_signed_in? %>
             <%= link_to "Mes réservations", new_user_session_path, class: "dropdown-item"  %>
             <%= link_to "Mes appareils", new_user_session_path, class: "dropdown-item"  %>
+            <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           <% else %>
             <%= link_to "Inscription", new_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Connexion", new_user_session_path, class: "dropdown-item" %>
-            <%= link_to "Déconnexion", new_user_session_path, class: "dropdown-item" %>
           <% end %>
         </div>
       </li>
