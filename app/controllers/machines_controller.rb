@@ -15,7 +15,7 @@ before_action
 	def create
 		@machine = Machine.new(machine_params)
 		@machine.user = current_user
-		autorize @machine
+		authorize @machine
 		if @machine.save
 			redirect_to machine_path(@machine)
 		else
