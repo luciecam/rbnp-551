@@ -14,6 +14,7 @@ class MachinesController < ApplicationController
 
 	def create
 		@machine = Machine.new(machine_params)
+		autorize @machine
 		if @machine.save
 			redirect_to machine_path(@machine)
 		else
