@@ -1,5 +1,10 @@
 class BookingsController < ApplicationController
-  def new
+
+	def index
+		@bookings = policy_scope(Booking).order(created_at: :desc).where(user_id: current_user)
+	end
+
+	def new
 		@booking = Booking.new
     @machine = Machine.find(params[:machine_id])
     authorize @booking 
@@ -16,6 +21,11 @@ class BookingsController < ApplicationController
 		else
 			render 'new'
 		end
+	end
+
+	def show
+		@booking = Booking.find(params[:id])
+		authorize @booking
 	end
 
 	private
