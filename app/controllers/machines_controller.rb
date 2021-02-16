@@ -1,5 +1,5 @@
 class MachinesController < ApplicationController
-
+before_action 
 	def index
 		@machines = Machine.all
 	end
@@ -14,6 +14,7 @@ class MachinesController < ApplicationController
 
 	def create
 		@machine = Machine.new(machine_params)
+		@machine.user = current_user
 		if @machine.save
 			redirect_to machine_path(@machine)
 		else

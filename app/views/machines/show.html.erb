@@ -33,30 +33,30 @@
       </table>
     </div>
     <div class="col-sm-12 col-md-6">
-      <%= render "doses/new", machine: @machine, dose: @dose %>
+      <%#= render "doses/new", machine: @machine, dose: @dose %>
     </div>
   </div>
 
   <!-- <h3>Reviews</h3>
-  <% if @machine.reviews.empty? %>
+  <%# if @machine.reviews.empty? %>
     <p>Be the first to let a review</p>
-  <% else %>
+  <%# else %>
     <ul class="list-group">
-      <% @machine.reviews.each do |review| %>
+      <%# @machine.reviews.each do |review| %>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <span class="badge badge-primary badge-pill">
-            <% counter = 0 %>
-            <% 5.times do %>
-              <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
-              <% counter += 1 %>
-            <% end %>
+            <%# counter = 0 %>
+            <%# 5.times do %>
+              <i class="fa <%#= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+              <%# counter += 1 %>
+            <%# end %>
           </span>
-          <%= review.content %>
+          <%#= review.content %>
         </li>
-      <% end %>
+      <%# end %>
     </ul>
-  <% end %>--> 
+  <%# end %>--> 
 
-  <%= render "reviews/new", machine: @machine, review: @review %>
+  <%#= render "reviews/new", machine: @machine, review: @review %>
 
 </div>
