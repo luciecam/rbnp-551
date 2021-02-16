@@ -2,10 +2,13 @@ class BookingsController < ApplicationController
   def new
 		@booking = Booking.new
     @machine = Machine.find(params[:machine_id])
+    authorize @booking 
 	end
 
 	def create
 		@booking = Booking.new(booking_params)
+    @machine = Machine.find(params[:machine_id])
+    @booking.machine = @machine
 		@booking.user = current_user
 		authorize @booking
 		if @booking.save

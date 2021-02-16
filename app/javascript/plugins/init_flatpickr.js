@@ -2,10 +2,10 @@ import flatpickr from "flatpickr"
 import "flatpickr/dist/flatpickr.min.css" // Note this is important!
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin"
 
-const intiFlatpicker = () =>  {
+const initFlatpickr = () =>  {
    const bookingForm = document.getElementById('booking-form');
    if (bookingForm) {
-     bookings = []
+     const bookings = []
     // const bookings = JSON.parse(bookingForm.dataset.bookings);
     flatpickr("#range_start", {
       plugins: [new rangePlugin({ input: "#range_end"})],
@@ -16,4 +16,4 @@ const intiFlatpicker = () =>  {
     })
   }
 }
-export {intiFlatpicker}
+export { initFlatpickr }
