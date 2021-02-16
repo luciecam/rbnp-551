@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Add a new machine</h1>
+
+      <%= simple_form_for @machine do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :specifications, as: :check_boxes, collection: ["top grill", "plancha", "barbecue", "raclette", "large number of cups (>10)", "power > 1000 Watts", "accessories", "cable length > 2m"] %>
+        <%= f.input :condition, collection: ["new", "very good state", "good state", "satisfactory"] %>
+        <%= f.input :address %>
+        <%= f.input :price %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
