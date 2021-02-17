@@ -6,10 +6,10 @@
     align-items: center;
     margin-top: 16px;
     position: relative;
+    border-radius: 10px;
     &:hover {
       background-color: rgba(0,0,0,0.1);
       box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
-      border-radius: 10px;
     }
     img {
       height: 100%;
@@ -36,6 +36,6 @@
   .card-product .card-product-infos {
     padding: 16px;
     position: absolute;
-    right: 155px;
+    left: 155px;
   }
   
