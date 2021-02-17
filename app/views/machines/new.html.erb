@@ -10,6 +10,7 @@
         <%= f.input :condition, collection: ["new", "very good state", "good state", "satisfactory"] %>
         <%= f.input :address %>
         <%= f.input :price %>
+        <%= f.input :photo, as: :file %>
         <%= f.button :submit, class: 'btn btn-primary' %>
       <% end %>
     </div>
