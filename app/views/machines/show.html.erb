@@ -8,6 +8,7 @@
       <h2>Description (Your machine is great for vegetables, seafood, or meat?)</h2>
 
       <h3>Specifications</h3>
+      <%= cl_image_tag @machine.photo.key, height: 300, width: 400, crop: :fill %>
       <table class="table table-bordered">
         <tbody>
           <thead>
