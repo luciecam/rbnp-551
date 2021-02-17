@@ -3,13 +3,15 @@ class MachinesController < ApplicationController
 	before_action 
 	def index
 		@machines = policy_scope(Machine).order(created_at: :desc)
+		# @machines = Machine.all
 		
 		@markers = @machines.geocoded.map do |machine|
 			{
 			  lat: machine.latitude,
-			  lng: machine.longitude
+			  lng: machine.longitude,
+			  infoWindow: render_to_string(partial: "info_window", locals: { machine: machine }),
 			}
-		  end
+		end
 	end
 
 	def show
@@ -23,7 +25,7 @@ class MachinesController < ApplicationController
 	end
 
 	def create
-		@machine = Machine.new(machine_params)
+		@machine = Machine.new(machine_params) 
 		@machine.user = current_user
 		authorize @machine
 		if @machine.save
@@ -52,7 +54,7 @@ class MachinesController < ApplicationController
 	private
 
 	def machine_params
-		params.require(:machine).permit(:name, :description, :specifications, :price, :address, :condition, :photo)
+		params.require(:machine).permit(:name, :description, :price, :address, :condition, :photo, specifications: [])
 	end    
 end
 
