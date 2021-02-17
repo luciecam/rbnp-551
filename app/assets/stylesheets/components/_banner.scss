@@ -3,25 +3,27 @@
     background-repeat: no-repeat;
     background-position: center;
     padding: 100px 0 200px;
+    h1 {
+      margin-bottom: 16px;
+      margin-top: 64px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      font-size: 32px;
+      font-weight: bold;
+      height: 40px;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 200;
+      color: white;
+      opacity: .9;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
   }
   
-  .banner h1 {
-    margin-bottom: 32px;
-    margin-top: 64px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
-    font-weight: bold;
-    height: 40px;
-  }
-  
-  .banner p {
-    font-size: 20px;
-    color: white;
-    opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
-  
+ 
 .btn-discover {
     border-radius: 50px;
     background-color: white;
