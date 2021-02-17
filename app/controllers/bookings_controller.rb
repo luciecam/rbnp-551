@@ -25,6 +25,7 @@ class BookingsController < ApplicationController
 	end
 
 	def show
+		# raise
 		@booking = Booking.find(params[:id])
 		@machine = @booking.machine
 		authorize @booking
@@ -33,7 +34,7 @@ class BookingsController < ApplicationController
 	private
 
 	def booking_params
-		params.require(:booking).permit(:start_date, :end_date)
+		params.require(:booking).permit(:start_date,:end_date)
 	end    
 end
 
