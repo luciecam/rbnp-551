@@ -1,41 +1,42 @@
 <div class="container">
-  <p><%= @booking.price.to_s %></p>
+  <p><%#= @booking.price.to_s %></p>
+  <h3>Your booking</h3>
+  <div class="card-product">
+    <%#= cl_image_tag(@booking.machine.photo.key,
+        width: 400, height: 300, crop: :fill) %>
+    <div class="card-product-infos">
+      <div class="d-flex justify-content-between">
+        <div>
+          <p> Machine name </p>
+          <h1><%= @machine.name %></h1>
+        </div>
+        <div>
+          <p>Description <strong>relevant info</strong> only.</p>
+          <%= @machine.description %>
+        </div>
 
-  <h1><%= @machine.name %></h1>
+          <div>       
+            <p> Rental starting date </p>
+            <%= @booking.start_date %>
+          </div>
+
+          <div>
+            <p>Rental ending date </p>
+            <%= @booking.start_date %>
+          </div>
+
+          <div>
+            <p> Total amount </p>
+            <p><%= @booking.price %> </p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+ 
   <%= link_to "Back to all machines", root_path %>
   <br>
   <%#= cl_image_tag @machine.photo, height: 300, width: 400, crop: :fill %>
 
- <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <h3>Booking</h3>
-      <table class="table table-bordered">
-        <tbody>
-          <thead>
-            <th>Machine name</th>
-            <th>Rental starting date</th>
-            <th>Rental ending date</th>
-            <th>Total amount</th>
-          </thead>
-          <% @machine.bookings.each do |booking| %>
-            <tr>
-              <td><%= booking.machine_id %></td>
-              <td><%= booking.start_date %></td>
-              <td><%= booking.end_date %></td>
-              <td><%= booking.price %></td>
-              <td>
-                <%= link_to booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fa fa-trash destroy_dose"></i>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-sm-12 col-md-6">
-      <%#= render "bookings/new", machine: @machine, booking: @booking %>
-    </div>
 
-</div>
 

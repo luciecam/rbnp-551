@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Booking.destroy_all
 Machine.destroy_all
 User.destroy_all
 
@@ -28,7 +29,7 @@ user3 = User.create!(
 
 # p 'creating machine'
 
-Machine.create!(
+machine1 = Machine.create!(
   name: "Super raclette",
   description: "Incroyable machine à raclette",
   price: 9,
@@ -107,4 +108,13 @@ Machine.create!(
   condition: "Parfait etat",
   rating: 5
   )
+
+Booking.create!(
+  user: user1,
+  machine: machine1,
+  start_date: Date.today,
+  end_date: Date.today + 7,
+  price: 99,
+  )
+
 
