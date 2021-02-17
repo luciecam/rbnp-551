@@ -23,7 +23,7 @@ class MachinesController < ApplicationController
 	end
 
 	def create
-		@machine = Machine.new(machine_params)
+		@machine = Machine.new(machine_params) 
 		@machine.user = current_user
 		authorize @machine
 		if @machine.save
@@ -52,7 +52,7 @@ class MachinesController < ApplicationController
 	private
 
 	def machine_params
-		params.require(:machine).permit(:name, :description, :specifications, :price, :address, :condition, :photo)
+		params.require(:machine).permit(:name, :description, :price, :address, :condition, :photo, specifications: [])
 	end    
 end
 
