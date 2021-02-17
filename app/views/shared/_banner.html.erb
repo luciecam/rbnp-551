@@ -2,14 +2,13 @@
   <div class="container">
     <%= simple_form_for :search, url: root_path, method: :get do |f| %>
       <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+        <input class="form-control string required" type="text" name="search[query]" id="search_query" placeholder="Appareil à raclette, Paris"/>
         <button name="button" type="submit" class="btn btn-flat">
           <i class="fas fa-search"></i>
         </button>
       </div>
     <% end %>
     <h1 id="banner-title"></h1>
-    <p>N'achetez plus vos propres appareils, louez-les près de chez vous !</p>
     <%= link_to "Organisez votre prochaine soirée", machines_path, class:"btn-discover" %>
     <p></p>
   </div>
