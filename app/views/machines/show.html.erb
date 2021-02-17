@@ -22,8 +22,8 @@
           <%= link_to "book it", new_machine_booking_path(@machine) %>
           <% @machine.bookings.each do |booking| %>
             <tr>
-              <td><%= machine.user.name %></td>
-              <td><%= machine.description %></td>
+              <td><%= @machine.user %></td>
+              <td><%= @machine.description %></td>
               <td>
                 <%= link_to booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } do %>
                 
