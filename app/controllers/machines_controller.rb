@@ -3,13 +3,15 @@ class MachinesController < ApplicationController
 	before_action 
 	def index
 		@machines = policy_scope(Machine).order(created_at: :desc)
+		# @machines = Machine.all
 		
 		@markers = @machines.geocoded.map do |machine|
 			{
 			  lat: machine.latitude,
-			  lng: machine.longitude
+			  lng: machine.longitude,
+			  infoWindow: render_to_string(partial: "info_window", locals: { machine: machine }),
 			}
-		  end
+		end
 	end
 
 	def show

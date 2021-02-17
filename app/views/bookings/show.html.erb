@@ -1,4 +1,42 @@
 <div class="container">
-  <p><%= @booking.price.to_s %></p>
-</div>
+  <p><%#= @booking.price.to_s %></p>
+  <h3>Your booking</h3>
+  <div class="card-product">
+    <%#= cl_image_tag(@booking.machine.photo.key,
+        width: 400, height: 300, crop: :fill) %>
+    <div class="card-product-infos">
+      <div class="d-flex justify-content-between">
+        <div>
+          <p> Machine name </p>
+          <h1><%= @machine.name %></h1>
+        </div>
+        <div>
+          <p>Description <strong>relevant info</strong> only.</p>
+          <%= @machine.description %>
+        </div>
+
+          <div>       
+            <p> Rental starting date </p>
+            <%= @booking.start_date %>
+          </div>
+
+          <div>
+            <p>Rental ending date </p>
+            <%= @booking.start_date %>
+          </div>
+
+          <div>
+            <p> Total amount </p>
+            <p><%= @booking.price %> </p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <%= link_to "Back to all machines", machines_path, class:"btn btn-primary" %>
+  <br>
+  <%#= cl_image_tag @machine.photo, height: 300, width: 400, crop: :fill %>
+
+
 
