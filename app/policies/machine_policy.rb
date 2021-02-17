@@ -1,5 +1,5 @@
 class MachinePolicy < ApplicationPolicy
-
+  
   def show?
     return true
   end

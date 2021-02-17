@@ -1,7 +1,15 @@
 class MachinesController < ApplicationController
-before_action 
+	skip_before_action :authenticate_user!, only: [:index, :show]
+	before_action 
 	def index
 		@machines = policy_scope(Machine).order(created_at: :desc)
+		
+		@markers = @machines.geocoded.map do |machine|
+			{
+			  lat: machine.latitude,
+			  lng: machine.longitude
+			}
+		  end
 	end
 
 	def show
