@@ -2,7 +2,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 100px 0 200px;
+    padding: 25px 0 200px;
     h1 {
       margin-bottom: 16px;
       margin-top: 64px;
@@ -14,11 +14,10 @@
     }
     p {
       font-size: 20px;
-      font-weight: 200;
       color: white;
       opacity: .9;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-      margin-top: 24px;
+      margin-top: 12px;
       margin-bottom: 24px;
     }
   }
@@ -26,14 +25,14 @@
 
 .btn-discover {
     border-radius: 50px;
-    background-color: white;
-    opacity: 0.7;
-    padding: 10px;
+    background-color: rgb(254, 198, 13);
+    opacity: 0.9;
+    padding: 16px;
     text-decoration: none;
     color: rgba(0,0,0,0.8);
     &:hover {
         text-decoration: none;
-        opacity: 0.9;
+        opacity: 1;
         color: rgba(0,0,0,0.8);
     }
 }
@@ -50,3 +49,13 @@
       opacity: 0.8;
     }
   }
+
+.logo-banner {
+  text-align: center;
+  img {
+    border-radius: 65px;
+  }
+  p {
+    font-weight: 300;
+  }
+}
