@@ -1,3 +1,11 @@
+.index-cards {
+    display: grid;
+    width: 99vw;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    margin: 0px 8px;
+}
+
 .card-description {
     overflow: hidden;
     background-color: white;
@@ -27,12 +35,5 @@
         text-decoration: none;
         color: black;
     }
-  }
+}
   
-  .index-cards {
-    display: grid;
-    width: 99vw;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 8px;
-    margin: 0px 8px;
-  }
