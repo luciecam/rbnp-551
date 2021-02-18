@@ -15,10 +15,10 @@ class BookingsController < ApplicationController
 		@machine = Machine.find(params[:machine_id])
 		@booking.machine = @machine
 		@booking.user = current_user
-		@booking.price = (@booking.end_date - @booking.start_date) * @machine.price
+		@booking.price = (@booking.end_date - @booking.start_date + 1) * @machine.price
 		authorize @booking
 		if @booking.save
-			redirect_to booking_path(@booking)
+			redirect_to bookings_path
 		else
 			render 'new'
 		end
