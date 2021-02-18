@@ -1,4 +1,12 @@
-.card-description {
+.index-cards {
+    display: grid;
+    width: 99vw;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    margin: 0px 8px;
+}
+
+.card-details {
     overflow: hidden;
     background-color: white;
     border-radius: 4px;
@@ -28,6 +36,7 @@
         text-decoration: none;
         color: black;
     }
+<<<<<<< HEAD
   }
 
    .bookings-title {
@@ -49,3 +58,14 @@
     background-color: #f0f3f7;
     border-color: #f7f8f9;
   }
+=======
+}
+
+.card-text-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+>>>>>>> ad0e6d7221c1f71edfc3426196fdd5f66babafc1

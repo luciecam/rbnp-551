@@ -1,0 +1,97 @@
+.background-new-machine {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2020.2F12.2F11.2Ff177d6fe-0930-4888-b761-9ccda3c1f348.2Ejpeg/850x478/quality/90/crop-from/center/les-erreurs-que-l-on-fait-tous-avec-la-raclette.jpeg');
+  background-image: url(https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2020.2F12.2F11.2Ff177d6fe-0930-4888-b761-9ccda3c1f348.2Ejpeg/850x478/quality/90/crop-from/center/les-erreurs-que-l-on-fait-tous-avec-la-raclette.jpeg);
+  background-size: cover;
+  padding: 20px 0 20px 0;
+}
+
+#new-machine {
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35) ;
+  margin: 20px 400px;
+  padding: 20px;
+  background-color: white;
+}
+
+#form-book {
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35) ;
+  padding: 20px;
+  background-color: white;
+    h2 {
+    margin-bottom: 25px;
+  }
+}
+
+#form-product {
+  // border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 20px;
+  background-color: white;
+}
+
+#total-amount {
+  font-size: 22px;
+  border-color: black;
+}
+
+.product-photo {
+  border-radius: 5px;
+  height: 200px;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.machine-info-row {
+  display: flex;
+}
+
+.spef {
+  display: flex;
+  width: 200px;
+  margin-top: 24px;
+}
+
+.spef {
+ i {
+  font-size: 30px;
+  }
+  h4 {
+    white-space: nowrap;
+  }
+}
+#form-product
+.icon-align {
+  text-align: center;
+  width: 40px;
+  margin-right: 20px;
+}
+
+
+#description-font {
+  text-align: center;
+  padding-top: 20px;
+  font-style: italic;
+  border-top: 1px dotted rgb(30, 30, 30);
+  margin-top: 20px;
+  background-color: antiquewhite;
+  border-bottom: 1px dotted rgb(30, 30, 30);
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.head-product {
+  h2 {
+  padding-top: 40px;
+  border-top: 1px dotted #1e1e1e;
+  }
+}
+
