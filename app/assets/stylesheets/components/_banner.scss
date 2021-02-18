@@ -28,14 +28,14 @@
     background-color: rgb(254, 198, 13);
     opacity: 0.9;
     padding: 16px;
-    text-decoration: none;
+    text-decoration: none !important;
     color: rgba(0,0,0,0.8);
     &:hover {
-        text-decoration: none;
+        text-decoration: none !important;
         opacity: 1;
         color: rgba(0,0,0,0.8);
     }
-}
+} 
 
 .btn-flat {
     color: white;
