@@ -14,7 +14,7 @@
         <%= link_to "Louez vos appareils 🧀🥩", new_machine_path, class: "nav-link btn-navbar" %>
       </li>
       <li class="nav-item dropdown">
-        <% if user_signed_in? %>
+        <% if user_signed_in? && current_user.photo.attached? %>
          <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <% else %>
           <p>😋</p>
