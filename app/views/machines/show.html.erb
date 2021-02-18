@@ -1,76 +1,72 @@
-<div class="container"> 
-    <%= link_to "Back", machines_path, class: "btn-discover", style: "color: black" %>
-  <div class = "head-product"> 
-    <h1><%= @machine.name %></h1>
-    <h3><%=@machine.address%></h3>
-  </div>
-
-  <div class="product-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @machine.photo.key, height: 300, width: 400, crop: :fill %>')">
-  </div>
-  
-  <div class="product-info">
-    <div class="product-description">
-      <%=@machine.description %>    
-    </div>
-    <div class="product-details">
-      <div class="product-detail">
-        <div class="product-specifications">
-          <% JSON.parse(@machine.specifications).drop(1).each do |specification|%>
-            <div class="product-specification">
-              <%= specification %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-      <div class="product-detail">
-        <%=@machine.condition%>
-      </div>
-    </div>
-  </div>
-  front-cloudinary
-  <div style="text-align: center">
-    <%= link_to "Book Machine", new_machine_booking_path(@machine), class: "btn-discover", style: "background-color: green; color: white" %>
-</div>
 
 <div class="container">
-  <h1><%= @machine.name %></h1>
-  <%= link_to "Back to all machines", machines_path %>
-  
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <h2>Description (Your machine is great for vegetables, seafood, or meat?)</h2>
+  <div class = "head-product">
+    <h2><%= @machine.name %></h2>
+  </div>
+  <div class="row justify-content-around">
 
-      <h3>Specifications</h3>
-      <%= cl_image_tag @machine.photo.key, height: 300, width: 400, crop: :fill %>
-      <table class="table table-bordered">
-        <tbody>
-          <thead>
-					  <th>Functions (table grill, etc.)</th>
-            <th>Numbers of guests (number of spatulas)</th>
-						<th>Number of hotplates</th>
-						<th>Power (Watts)</th>
-            <th>Cable length</th>
-						<th>Options</th>
-          </thead>
-          <%= link_to "book it", new_machine_booking_path(@machine) %>
-          <% @machine.bookings.each do |booking| %>
-            <tr>
-              <td><%= @machine.user %></td>
-              <td><%= @machine.description %></td>
-              <td>
-                <%= link_to booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } do %>
-                
-                  <i class="fa fa-trash destroy_booking"></i>
-                <% end %>
-
-              </td>
-            </tr>
+    <div class="col-7" id="form-product">
+      <div class="product-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @machine.photo.key, height: 300, width: 400, crop: :fill %>')"></div>
+      <div class="machine-info-row justify-content-around">
+        <div class="spef justify-content-start">
+          <div class="icon-align">
+            <i class="fas fa-bread-slice"></i>
+          </div>
+          <% JSON.parse(@machine.specifications).drop(1).each do |specification|%>
+            <h4><%= specification%></h4>
           <% end %>
-        </tbody>
-      </table>
+        </div>
+        <div class="spef justify-content-start">
+          <div class="icon-align">
+            <i class="fas fa-hand-sparkles"></i>
+          </div>
+          <h4><%=@machine.condition%></h4>
+        </div>
+      </div>
+      <div class="machine-info-row justify-content-around">
+        <div class="spef justify-content-start">
+          <div class="icon-align">
+            <i class="fas fa-map-marked-alt"></i>
+            </div>
+          <h4><%=@machine.address%></h4>
+        </div>
+        <div class="spef justify-content-start">
+          <div class="icon-align">
+            <i class="fas fa-euro-sign"></i>
+          </div>
+          <h4><%=@machine.price%></h4>
+        </div>
+      </div>
+      <div id="description-font">
+        <h4>Description</h4>
+        <p><%=@machine.description%></p>
+      </div>
+      <%= link_to "Back to all machines", machines_path %>
     </div>
-    <div class="col-sm-12 col-md-6">
-      <%#= render "doses/new", machine: @machine, dose: @dose %>
+    <div class="col-4 p-0">
+      <div id="form-book" class="p-4 sticky-top p-6">
+        <h2>Create a new booking</h2>
+        <div id="booking-form" data-price="<%= @machine.price %>">
+          <%= simple_form_for [@machine, @booking] do |f| %>
+            <%= f.input  :start_date, as: :string, required: false, input_html: {id: "range_start"} %>
+            <%= f.input  :end_date,   as: :string, required: false, input_html: {id: "range_end"} %>
+            <%= f.button :submit, class: 'w-100 mt-3 btn btn-primary' %>
+          <% end %>
+        </div>
+        <div id="total-amount">
+      </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
