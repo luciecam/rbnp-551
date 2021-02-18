@@ -1,19 +1,20 @@
 <div class="main-container">
   <div class="index-cards">
     <% @machines.each do |machine| %>  
-      <div class="card-description">
+      <div class="card-details">
         <%= link_to machine_path(machine) do %>
           <% if machine.photo.attached? %>
             <%= cl_image_tag machine.photo.key %>
           <% end  %>
-          <h2><%= link_to machine.name, machine_path(machine) %></h2>
-          <%= machine.description %>
-          <div class="card-price">
-            <p class="card-price-day"><%= machine.price %>€/ jour</p>
+          <div class="card-text-elements">
+            <div class="card-title-description">
+              <h2><%= link_to machine.name, machine_path(machine) %></h2>
+              <%= machine.description %>
+            </div>
+            <div class="card-price">
+              <h3><%= machine.price %>€/ jour</h3>
+            </div>
           </div>
-          <% if policy(machine).update? %>
-            <%= link_to "update info", edit_machine_path(machine) %>
-          <% end %>
         <% end %>
       </div>
     <% end %>
