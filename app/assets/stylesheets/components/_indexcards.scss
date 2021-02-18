@@ -6,7 +6,7 @@
     margin: 0px 8px;
 }
 
-.card-description {
+.card-details {
     overflow: hidden;
     background-color: white;
     border-radius: 4px;
@@ -36,4 +36,11 @@
         color: black;
     }
 }
-  
+
+.card-text-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
