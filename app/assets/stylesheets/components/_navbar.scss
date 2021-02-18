@@ -15,7 +15,7 @@
   border-radius: 50px;
   margin: 0px 24px;
   &:hover {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.05);
     border-radius: 50px;
   }
 }
@@ -23,5 +23,25 @@
 .navbar-brand {
   img {
     border-radius: 50px;
+  }
+}
+
+.dropdown {
+  display: flex;
+}
+
+.user-login-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  &:hover {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 50px;
+  }
+  i {
+    color: rgba(0,0,0,0.6);
+    margin: 0px 8px;
+    font-size: 16px;
   }
 }
