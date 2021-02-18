@@ -26,6 +26,7 @@
         opacity: .7;
         margin: 0;
     }
+
     h2 {
         font-size: 24px;
         font-weight: bold;
@@ -35,6 +36,29 @@
         text-decoration: none;
         color: black;
     }
+<<<<<<< HEAD
+  }
+
+   .bookings-title {
+        margin-bottom: 35px;
+        font-family: Helvetica, sans-serif, bold;
+    }
+    
+  
+  .index-cards {
+    display: grid;
+    width: 99vw;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    margin: 0px 8px;
+  }
+
+  .btn-primary {
+    color: #888585;
+    background-color: #f0f3f7;
+    border-color: #f7f8f9;
+  }
+=======
 }
 
 .card-text-elements {
@@ -44,3 +68,4 @@
 }
 
 
+>>>>>>> ad0e6d7221c1f71edfc3426196fdd5f66babafc1
