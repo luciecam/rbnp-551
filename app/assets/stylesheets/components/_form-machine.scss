@@ -31,8 +31,8 @@
 }
 
 #total-amount {
+  margin-top: 30px;
   font-size: 22px;
-  border-color: black;
 }
 
 .product-photo {
@@ -61,18 +61,22 @@
 }
 
 .spef {
- i {
+  i {
   font-size: 30px;
   }
-  h4 {
+  p {
     white-space: nowrap;
+    font-size: 20px;
+    margin-left: 15px;
   }
 }
+
 #form-product
 .icon-align {
   text-align: center;
   width: 40px;
   margin-right: 20px;
+  display: flex;
 }
 
 
@@ -95,3 +99,31 @@
   }
 }
 
+
+
+#icone {
+  font-size: 30px;
+}
+
+#description-font {
+    text-align: center;
+    padding-top: 20px;
+    font-style: italic;
+    border-top: 1px dotted #1e1e1e;
+    margin-top: 20px;
+    background-color: rgb(254, 198, 13);
+    border-bottom: 1px dotted #1e1e1e;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+    opacity: 0.8;
+}
+
+.col-4 {
+  .btn-discover{
+    padding: 6px;
+  }
+
+#back-machine {
+  margin-top: 5px;
+}
+}
