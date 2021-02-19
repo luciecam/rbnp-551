@@ -6,9 +6,11 @@
       </div>
       <%= simple_form_for @machine do |f| %>
         <%= f.input :name %>
+        <%= f.input :category, as: :check_boxes, collection: ["Barbecue", "Fondue", "Pierrade", "Plancha", "Raclette"], include_blank: false, include_hidden: false %>
+        <%= f.input :capacity %>
+        <%= f.input :specifications, as: :check_boxes, collection: ["large number of cups (>10)", "power > 1000 Watts", "accessories", "cable length > 2m"], include_blank: false, include_hidden: false %>
         <%= f.input :description %>
-        <%= f.input :specifications, as: :check_boxes, collection: ["top grill", "plancha", "barbecue", "raclette", "large number of cups (>10)", "power > 1000 Watts", "accessories", "cable length > 2m"] %>
-        <%= f.input :condition, collection: ["new", "very good state", "good state", "satisfactory"] %>
+        <%= f.input :condition, collection: ["Neuf", "Très bon état", "Bon état", "Moyen"] %>
         <%= f.input :address %>
         <%= f.input :price %>
         <%= f.input :photo, as: :file %>

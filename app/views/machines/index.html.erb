@@ -9,10 +9,16 @@
           <div class="card-text-elements">
             <div class="card-title-description">
               <h2><%= link_to machine.name, machine_path(machine) %></h2>
-              <%= machine.description %>
             </div>
-            <div class="card-price">
-              <h3><%= machine.price %>€/ jour</h3>
+            <div class="card-icons">
+              <div>
+                <p>💰</p>
+                <h3><%= machine.price %>€/ jour</h3>
+              </div>
+              <div>
+                <p>🍽️</p>
+                <h3><%= machine.capacity %></h3>
+              </div>
             </div>
           </div>
         <% end %>

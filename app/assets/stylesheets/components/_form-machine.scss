@@ -20,25 +20,32 @@
   background-color: white;
     h2 {
     margin-bottom: 25px;
+    font-size: 24px;
+    text-align: center;
   }
 }
 
 #form-product {
-  // border-radius: 20px;
+  border-radius: 5px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  padding: 20px;
+  padding: 16px;
   background-color: white;
 }
 
 #total-amount {
-  font-size: 22px;
-  border-color: black;
+  margin-top: 16px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+  font-family: Nunito;
 }
 
-.product-photo {
+.product-picture {
   border-radius: 5px;
-  height: 200px;
+  height: 300px;
   justify-content: center;
+  background-size: cover;
+  background-position-y: center;
 }
 
 .row {
@@ -47,7 +54,7 @@
   margin-right: -5px;
   margin-left: -5px;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .machine-info-row {
@@ -61,37 +68,66 @@
 }
 
 .spef {
- i {
+  i {
   font-size: 30px;
   }
-  h4 {
+  p {
     white-space: nowrap;
+    font-size: 20px;
+    margin-left: 15px;
   }
 }
-#form-product
+
+/* #form-product */
 .icon-align {
   text-align: center;
   width: 40px;
   margin-right: 20px;
-}
-
-
-#description-font {
-  text-align: center;
-  padding-top: 20px;
-  font-style: italic;
-  border-top: 1px dotted rgb(30, 30, 30);
-  margin-top: 20px;
-  background-color: antiquewhite;
-  border-bottom: 1px dotted rgb(30, 30, 30);
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+  display: flex;
 }
 
 .head-product {
   h2 {
   padding-top: 40px;
-  border-top: 1px dotted #1e1e1e;
   }
 }
 
+#icone {
+  font-size: 30px;
+}
+
+#description-font {
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 20px;
+    margin-top: 20px;
+    background-color: rgb(254, 198, 13);
+    margin-bottom: 0;
+    padding-bottom: 8px;
+    opacity: 0.8;
+    h4 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+}
+
+.col-4 {
+  .btn-discover{
+    padding: 6px;
+  }
+}
+
+#back-machine {
+  margin-top: 20px 0 20px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.2);
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: rgba(0,0,0,0.4);
+  }
+}

@@ -22,7 +22,7 @@ const initFlatpickr = () =>  {
           const price = parseFloat(document.getElementById("booking-form").dataset.price, 10)
           console.log(price)
           const totalAmount = price * differenceInDays
-          document.getElementById("total-amount").innerText = `Prix total de la location : ${totalAmount.toFixed(2)} €` 
+          document.getElementById("total-amount").innerText = `Prix total : ${totalAmount.toFixed(2)} €` 
         }
        // console.log(dateStr)
   //      console.log(instance)
