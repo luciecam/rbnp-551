@@ -2,19 +2,18 @@
   <div class="row justify-content-center" id="new-machine">
     <div class="col-md-12">
       <div class="form-color"> 
-        <h1>Add a new machine</h1>
+        <h1>Mettre mon appareil en location</h1>
       </div>
       <%= simple_form_for @machine do |f| %>
-        <%= f.input :name %>
-        <%= f.input :category, as: :check_boxes, collection: ["Barbecue", "Fondue", "Pierrade", "Plancha", "Raclette"], include_blank: false, include_hidden: false %>
-        <%= f.input :capacity %>
-        <%= f.input :specifications, as: :check_boxes, collection: ["large number of cups (>10)", "power > 1000 Watts", "accessories", "cable length > 2m"], include_blank: false, include_hidden: false %>
-        <%= f.input :description %>
-        <%= f.input :condition, collection: ["Neuf", "Très bon état", "Bon état", "Moyen"] %>
-        <%= f.input :address %>
-        <%= f.input :price %>
+        <%= f.input :name, label: 'Titre de votre annonce' %>
+        <%= f.input :category, label: "Type d'appareil ", collection: ["Barbecue", "Fondue", "Pierrade", "Plancha", "Raclette", "Autre"], include_blank: false, include_hidden: false %>
+        <%= f.input :capacity, label: "Nombre de couverts 🍽️" %>
+        <%= f.input :description, label: "Description de votre annonce" %>
+        <%= f.input :condition, label: "Etat de votre appareil ⚙️", collection: ["Neuf", "Très bon état", "Bon état", "Moyen"] %>
+        <%= f.input :address, label: "Votre adresse 🗺️" %>
+        <%= f.input :price, label: "Prix de la location (par jour) 💸" %>
         <%= f.input :photo, as: :file %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
+        <%= f.button :submit, label:"Publier mon annonce", class: 'btn btn-discover' %>
       <% end %>
   </div>
 </div>

@@ -5,20 +5,6 @@
     <div class="col-7" id="form-product">
       <div class="product-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @machine.photo.key, crop: :fill %>')"></div>
       <div class="machine-info-row justify-content-around">
-        <!-- <div class="spef justify-content-start">
-          <div class="icon-align">
-            <h1 id="icone">🗺️</h1>
-            <% JSON.parse(@machine.specifications).drop(1).each do |specification|%>
-              <p><%= specification%></p>
-            <% end %>
-          </div>
-        </div>
-        <div class="spef justify-content-start">
-          <div class="icon-align">
-            <h1 id="icone">🗺️</h1>
-            <p><%=@machine.condition%></p>
-          </div>
-        </div> -->
       </div>
       <div class="machine-info-row justify-content-around">
         <div class="spef justify-content-start align-middle">
@@ -55,11 +41,11 @@
     </div>
     <div class="col-4 p-0">
       <div id="form-book" class="p-4 sticky-top p-6">
-        <h2><strong>Create a new booking</strong></h2>
+        <h2><strong>Réserver cet appareil</strong></h2>
         <div id="booking-form" data-price="<%= @machine.price %>">
           <%= simple_form_for [@machine, @booking] do |f| %>
-            <%= f.input  :start_date, as: :string, required: false, input_html: {id: "range_start"} %>
-            <%= f.input  :end_date,   as: :string, required: false, input_html: {id: "range_end"} %>
+            <%= f.input  :start_date, label: "Date de début 📅", as: :string, required: false, input_html: {id: "range_start"} %>
+            <%= f.input  :end_date, label: "Date de fin 📅", as: :string, required: false, input_html: {id: "range_end"} %>
             <%= f.button :submit, class: 'w-100 mt-3 btn btn-discover' %>
           <% end %>
         </div>
@@ -68,7 +54,7 @@
       </div>
     </div>
   </div>
-  <div id="back-machine"><%= link_to "Back to all machines", machines_path %></div>
+  <div id="back-machine"><%= link_to "Retourner à la sélection de machines", machines_path %></div>
 </div>
 
 

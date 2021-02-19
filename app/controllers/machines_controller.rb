@@ -6,11 +6,11 @@ class MachinesController < ApplicationController
 		# @machines = Machine.all
 
 		@markers = @machines.geocoded.map do |machine|
-			{
-			  lat: machine.latitude,
-			  lng: machine.longitude,
-			  infoWindow: render_to_string(partial: "info_window", locals: { machine: machine }),
-			}
+		{
+		lat: machine.latitude,
+		lng: machine.longitude,
+		infoWindow: render_to_string(partial: "info_window", locals: { machine: machine }),
+		}
 		end
 	end
 
@@ -55,7 +55,7 @@ class MachinesController < ApplicationController
 	private
 
 	def machine_params
-		params.require(:machine).permit(:name, :description, :price, :address, :condition, :photo, :capacity, specifications: [], category: [])
+		params.require(:machine).permit(:name, :description, :price, :address, :condition, :photo, :capacity, :category)
 	end
 end
 
