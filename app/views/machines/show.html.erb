@@ -1,12 +1,9 @@
 
 <div class="container">
-  <div class = "head-product">
-    <h2><%= @machine.name %></h2>
-  </div>
   <div class="row justify-content-around">
 
     <div class="col-7" id="form-product">
-      <div class="product-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @machine.photo.key, height: 300, width: 400, crop: :fill %>')"></div>
+      <div class="product-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @machine.photo.key, crop: :fill %>')"></div>
       <div class="machine-info-row justify-content-around">
         <!-- <div class="spef justify-content-start">
           <div class="icon-align">
@@ -26,8 +23,7 @@
       <div class="machine-info-row justify-content-around">
         <div class="spef justify-content-start align-middle">
           <div class="icon-align">
-            <h1 id="icone">🗺️</h1>
-            <p><%=@machine.address%></p>
+            <p>🗺️ <%=@machine.address%></p>
           </div>
           <!-- <p><%=@machine.address%></p> -->
         </div>
@@ -37,32 +33,29 @@
       <div class="pl-1 ml-5 machine-info-row justify-content-around">
         <div class="spef justify-content-start">
           <div class="icon-align">
-            <h1 id="icone">🍽️</h1>
-            <p><%=@machine.address%></p>
+            <p>🍽️<%=@machine.capacity%></p>
           </div>
         </div>
         <div class="spef justify-content-start">
           <div class="icon-align">
-            <h1 id="icone">⚙️</h1>
-            <p><%=@machine.condition%></p>
+            <p>⚙️<%=@machine.condition%></p>
           </div>
         </div>
         <div class="spef justify-content-start">
           <div class="icon-align">
-            <h1 id="icone">💰</h1>
-            <p><%=@machine.price%>€ / jours</p>
+            <p>💰<%=@machine.price%>€ / j</p>
           </div>
         </div>
       </div>
         <div id="description-font">
-          <h4>Description</h4>
+          <h4><%= @machine.name %></h4>
+          <h4>---</h4>
           <p><%=@machine.description%></p>
         </div>
-      <div id="back-machine"><%= link_to "Back to all machines", machines_path %></div>
     </div>
     <div class="col-4 p-0">
       <div id="form-book" class="p-4 sticky-top p-6">
-        <h2>Create a new booking</h2>
+        <h2><strong>Create a new booking</strong></h2>
         <div id="booking-form" data-price="<%= @machine.price %>">
           <%= simple_form_for [@machine, @booking] do |f| %>
             <%= f.input  :start_date, as: :string, required: false, input_html: {id: "range_start"} %>
@@ -75,6 +68,7 @@
       </div>
     </div>
   </div>
+  <div id="back-machine"><%= link_to "Back to all machines", machines_path %></div>
 </div>
 
 
