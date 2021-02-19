@@ -256,6 +256,7 @@ GEM
 
 PLATFORMS
   ruby
+
   ruby
   x86_64-darwin-20
   x86_64-darwin-20
@@ -293,4 +294,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.4
+   2.1.4
