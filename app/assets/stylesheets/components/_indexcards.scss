@@ -26,6 +26,7 @@
         opacity: .7;
         margin: 0;
     }
+
     h2 {
         font-size: 24px;
         font-weight: bold;
@@ -42,6 +43,21 @@
         text-decoration: none;
         color: black;
     }
+
+  }
+
+   .bookings-title {
+        margin-bottom: 35px;
+        font-family: Helvetica, sans-serif, bold;
+    }
+    
+  
+  .btn-primary {
+    color: #888585;
+    background-color: #f0f3f7;
+    border-color: #f7f8f9;
+  }
+
 }
 
 .card-text-elements {
@@ -63,6 +79,7 @@
     height: 40px;
 }
 
+
 .card-icons {
     width: 120px;
     div {
@@ -76,3 +93,4 @@
         margin: 0px 4px;
     }
 }
+

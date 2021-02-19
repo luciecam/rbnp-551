@@ -1,6 +1,33 @@
-<%= current_user %>
+<div class="container">
+  <p><%#= @booking.price.to_s %></p>
+  <h3 class="bookings-title">Your booking</h3>
+  <% @bookings.each do |booking| %>
+    <div class="card-product">
+      <%= cl_image_tag booking.machine.photo.key %>
+      <div class="card-product-infos">
+        <div>
+          <div class="d-flex align-items-center product-name mr-5">
+            <h1 style="font-size:30px; margin-bottom: 0px"><%= booking.machine.name %></h1>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex card-product-infos justify-content-end align-items-center" style="position: unset;margin-right: 37px;">
+        <div class="range-dates mr-5 p-4">
+          <div class="start-date-booking">
+            Rental starting date: <b><%= booking.start_date %></b>
+          </div>
+          <div class="end-date-booking">
+            Rental ending date: <b><%= booking.end_date %></b>
+          </div>
+        </div>
+        <h2 style="font-size: 20px; padding: 10px 17px; background-color: #d9d9da; border-radius: 9px;"><%= number_with_precision(booking.price, precision: 2) %> €</h2>
+      </div>
+    </div>
+  <% end %>
 
-<%= @bookings.each do |booking| %>
-	<%= booking.start_date %>
-	<%= booking.end_date %>
-<% end %>
+
+
+ 
+  <%= link_to "Back to all machines", machines_path, class:"btn btn-primary mt-3" %>
+  <br>
+  <%#= cl_image_tag @machine.photo, height: 300, width: 400, crop: :fill %>
