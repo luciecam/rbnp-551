@@ -23,8 +23,8 @@
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <% if user_signed_in? %>
-              <%= link_to "Mes réservations", new_user_session_path, class: "dropdown-item"  %>
-              <%= link_to "Mes appareils", new_user_session_path, class: "dropdown-item"  %>
+              <%= link_to "Mes réservations", bookings_path, class: "dropdown-item"  %>
+              <%= link_to "Mes appareils", machines_path, class: "dropdown-item"  %>
               <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             <% else %>
               <%= link_to "Inscription", new_user_registration_path, class: "dropdown-item" %>
