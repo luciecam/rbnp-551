@@ -125,9 +125,48 @@
     text-decoration: none;
     color: rgba(0,0,0,0.2);
   }
-  
+
   a:hover {
     text-decoration: none;
     color: rgba(0,0,0,0.4);
   }
+}
+
+.btn-yellow {
+  border-radius: 50px;
+  background-color: #fec60d;
+  opacity: 0.9;
+  text-align: center;
+  padding: 6px;
+  font-weight: 800;
+  font-size: 16px;
+  text-decoration: none !important;
+  color: white;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:focus {
+    outline: none;
+  }
+}
+
+.btn-yellow:hover {
+  background-color: #f7bf05;
+}
+
+.pop-up-picture {
+  border-radius: 5px;
+  height: 200px;
+  width: 200px;
+  justify-content: center;
+  background-size: cover;
+  background-position-y: center;
 }
