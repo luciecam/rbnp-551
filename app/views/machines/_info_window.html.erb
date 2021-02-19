@@ -1,2 +1,8 @@
-<h2><%= machine.name %></h2>
-<p><%= machine.address %></p>
+<div class="pop-up-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path machine.photo.key, crop: :fill %>')"></div>
+
+<div>
+  <h2><%= machine.name %></h2>
+  <p><%= machine.address %></p>
+</div>
+
+<div class="btn-yellow" style="text-decoration: none"><%= link_to "Reserver", machine_path(machine) %></div>
