@@ -1,6 +1,6 @@
 <div class="container">
   <p><%#= @booking.price.to_s %></p>
-  <h3 class="bookings-title">Your booking</h3>
+  <h3 class="bookings-title font-weight-bold">Mes réservations</h3>
   <% @bookings.each do |booking| %>
     <div class="card-booking mb-4">
       <%= cl_image_tag booking.machine.photo.key %>
@@ -14,10 +14,10 @@
       <div class="d-flex card-booking-infos flex-grow-1 justify-content-end align-items-center" style="position: unset;margin-right: 37px;">
         <div class="range-dates mr-5 p-4">
           <div class="start-date-booking">
-            Rental starting date: <b><%= booking.start_date %></b>
+            Début de location: <b><%= booking.start_date %></b>
           </div>
           <div class="end-date-booking">
-            Rental ending date: <b><%= booking.end_date %></b>
+            Fin de location: <b><%= booking.end_date %></b>
           </div>
         </div>
         <h2 style="font-size: 20px; padding: 10px 17px; background-color: #d9d9da; border-radius: 9px;"><%= number_with_precision(booking.price, precision: 2) %> €</h2>
@@ -28,6 +28,6 @@
 
 
  
-  <%= link_to "Back to all machines", machines_path, class:"btn btn-primary mt-3" %>
+  <%= link_to "Retour aux appareils", machines_path, class:"btn btn-discover mt-3" %>
   <br>
   <%#= cl_image_tag @machine.photo, height: 300, width: 400, crop: :fill %>
