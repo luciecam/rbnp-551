@@ -32,11 +32,18 @@
         font-weight: bold;
         margin: 0;
     }
+    h3 {
+        font-size: 16px;
+        font-weight: 900;
+        white-space: nowrap;
+        text-align: right;
+        margin: 0px;
+    }
     a {
         text-decoration: none;
         color: black;
     }
-<<<<<<< HEAD
+
   }
 
    .bookings-title {
@@ -45,27 +52,45 @@
     }
     
   
-  .index-cards {
-    display: grid;
-    width: 99vw;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 8px;
-    margin: 0px 8px;
-  }
-
   .btn-primary {
     color: #888585;
     background-color: #f0f3f7;
     border-color: #f7f8f9;
   }
-=======
+
 }
 
 .card-text-elements {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    margin: 0px;
+    border-top: 1px solid rgb(230, 230, 230);
+    padding: 8px;
+}
+
+.card-title-description {
+   width: 100%;
+   padding-left: 12px; 
+}
+
+#product-avatar {
+    width: 40px;
+    height: 40px;
 }
 
 
->>>>>>> ad0e6d7221c1f71edfc3426196fdd5f66babafc1
+.card-icons {
+    width: 120px;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 12px 8px;
+    }
+    p {
+        margin: 0px 4px;
+    }
+}
+
